@@ -5,6 +5,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Links from "@/components/Links";
+import Pad from "@/components/Pad";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,18 +30,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/images/poke-background.jpg')] bg-fixed`}
       >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <div className="container mx-auto min-h-screen bg-blue-300">
+          <Pad amt={50} />
+          <div className="container mx-auto  bg-blue-300 ">
             <Box
               component="header"
-              className="w-full flex flex-col items-center"
+              className="w-full flex flex-col items-center "
             >
               <Links />
             </Box>
             {children}
           </div>
+          <Pad amt={50} />
         </AppRouterCacheProvider>
       </body>
     </html>
