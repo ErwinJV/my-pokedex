@@ -30,11 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/images/poke-background.jpg')] bg-fixed`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/images/poke-background.jpg')] bg-fixed `}
       >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <Pad amt={50} />
-          <div className="container mx-auto  bg-blue-300 ">
+          <div className="container mx-auto  bg-blue-300/45  rounded">
             <Box
               component="header"
               className="w-full flex flex-col items-center "
