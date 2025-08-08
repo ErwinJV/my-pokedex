@@ -25,7 +25,6 @@ export default async function RegionPage({ params }: Props) {
       component="main"
       className="w-full h-full flex flex-col justify-center items-center "
     >
-      <Typography variant="h2">Region: {region}</Typography>
       <PokemonList pokemons={pokemons} />
     </Box>
   );
